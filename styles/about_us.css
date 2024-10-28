@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #f4b083;
+    --background-color: #ffffff;
+    --reserve-button-color: #dc3343;
+    --footer-color: #ffc107;
+    --footer-text-color: #000000;
+    --footer-button-color: #60646c;
+    --text-color: #2a2a2a;
+    --navbar-hover-color: #e59a69;
+    --logo-brightness: 100%;
+    --image-brightness: 100%;
+
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --primary-color: #0e4b61;
+    --background-color: #374045;
+    --reserve-button-color: #003343;
+    --footer-color: #b78114;
+    --footer-text-color: #374045;
+    --footer-button-color: #374045;
+    --text-color: #c7cfde;
+    --navbar-hover-color: #136181;
+    --image-brightness: 70%;
+    --logo-brightness: 130%;
+}
+        body {
+            font-family: 'Kaushan Script', cursive;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: var(--navbar-hover-color);
+        }
+
+
+        .logo {
+            width: 150px;
+        }
+
+        #footer {
+            background-color: var(--footer-color) !important;
+        }
+
+button {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+
+        .footer-logo {
+            width: 150px;
+            filter: brightness(var(--logo-brightness));
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+
+        }
+
+        #card {
+            background-color: var(--primary-color);
+        }
+        #img {
+            filter: brightness(var(--image-brightness));
+        }
+
+        .content-section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .text-content {
+            background-color: #f4b083;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .date-time {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            color: #d3845b;
+        }
+        #dateTimeDisplay {
+            background-color: var(--footer-color) !important;
+            color: var(--text-color);
+        }
+
+        #showTimeBtn {
+            background-color: var(--footer-color);
+            color: var(--footer-text-color);
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .time-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ffc107;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .time-button:hover {
+            background-color: #e59a69;
+        }
+        .selected {
+            color: gold;
+        }
+
+        .animate {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            position: relative;
+            transition: transform 0.5s;
+        }
+
+        #list-items {
+            margin-top: 20px;
+            background-color: var(--primary-color);
+        }
+        #list-container {
+            background-color: var(--primary-color);
+        }
+        .list-group-item {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        #animate-image {
+            filter: brightness(var(--logo-brightness));
+        }
+        #animate-image-btn {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+
+
+
+

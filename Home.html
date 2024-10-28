@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITU Restaurant</title>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan%20Script" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html">
+                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="footer-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="our_menu.html">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="celebration.html">Celebrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Our Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve a Seat</a></li>
+                    <li class="nav-item" id="registerButton"><a class="nav-link auth-button" href="register.html">Register</a></li>
+                    <li class="nav-item" id="loginButton"><a class="nav-link auth-button" href="login.html">Login</a></li>
+                    <li class="nav-item d-none" id="logoutButton"><a class="nav-link auth-button" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle">NightMode</button>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container-fluid p-0">
+    <div id="restaurantCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#restaurantCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#restaurantCarousel" data-slide-to="1"></li>
+            <li data-target="#restaurantCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://plus.unsplash.com/premium_photo-1661627606440-a901eb9588c5?q=80&w=2940&auto=format&fit=crop');">
+            </div>
+            <div class="carousel-item" style="background-image: url('https://plus.unsplash.com/premium_photo-1661432769134-758550b8fedb?q=80&w=2832&auto=format&fit=crop');">
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1694717853140-8ecc9b1289e3?q=80&w=2940&auto=format&fit=crop');">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#restaurantCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#restaurantCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+        <div class="carousel-caption">
+            <h2>AITU Restaurant</h2>
+            <a href="reserve.html" class="btn btn-danger btn-lg" id="reserveButton">RESERVE A SEAT</a>
+        </div>
+    </div>
+</main>
+
+<main class="container-fluid p-0">
+    <!-- Add a button -->
+    <div class="text-center my-4" id="faq">
+        <button id="faqButton" class="btn btn-primary btn-lg">Show/Hide FAQs</button>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faqSection" class="container my-5">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4 class="faq-question">What are your restaurant hours?</h4>
+            <div class="faq-answer">
+                <p>We are open from 8 AM to 10 PM every day.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h4 class="faq-question">Do you offer vegetarian options?</h4>
+            <div class="faq-answer">
+                <p>Yes, we have a variety of vegetarian and vegan options available on our menu.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h4 class="faq-question">Can I reserve a table online?</h4>
+            <div class="faq-answer">
+                <p>Yes, you can easily reserve a table online by visiting our reservation page.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="py-3">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 mb-3">
+                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" class="footer-logo" alt="AITU Logo">
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Have a problem?</h3>
+                <p>Contact us at 999999@astanait.edu.kz</p>
+                <a href="contact.html" class="btn btn-secondary" id="contactUsButton">Contact Us</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Links</h3>
+                <ul class="list-unstyled">
+                    <li><a class="text-dark" href="our_menu.html">Our Menu</a></li>
+                    <li><a class="text-dark" href="about_us.html">About Us</a></li>
+                    <li><a class="text-dark" href="celebration.html">Celebrations</a></li>
+                    <li><a class="text-dark" href="locations.html">Our Locations</a></li>
+                    <li><a class="text-dark" href="reserve.html">Reserve a Seat</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Authors:</h3>
+                <ul class="list-unstyled">
+                    <li>Dulat Ali</li>
+                    <li>Tugelbaev Galymzhan</li>
+                    <li>Nurlan Aidyn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/DarkMode.js"></script>
+<script src="js/Home.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

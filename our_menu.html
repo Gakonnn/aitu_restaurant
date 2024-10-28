@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITU Restaurant</title>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan%20Script" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="styles/our_menu.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html">
+                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="our_menu.html">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="celebration.html">Celebrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Our Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve a Seat</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle">NightMode</button>
+
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="text-center py-5">
+        <div class="container">
+            <h2>Simple. Classic. Delicious.</h2>
+
+            <!-- Search Box -->
+            <div class="mb-4">
+                <label for="search" class="form-label">Search:</label>
+                <input type="text" id="search" class="form-control" placeholder="Search products..." oninput="filterProducts()">
+            </div>
+
+            <!-- Filter Dropdown -->
+            <div class="mb-4">
+                <label for="filter" class="form-label">Filter by:</label>
+                <select id="filter" class="form-select" onchange="filterProducts()">
+                    <option value="all">All Products</option>
+                    <option value="cakes">Cakes</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="cookies">Cookies</option>
+                    <option value="seasonal">Seasonal</option>
+                </select>
+            </div>
+
+            <!-- Sort Dropdown -->
+            <div class="mb-4">
+                <label for="sort" class="form-label">Sort by Price:</label>
+                <select id="sort" class="form-select" onchange="sortProducts()">
+                    <option value="default">Default</option>
+                    <option value="asc">Low to High</option>
+                    <option value="desc">High to Low</option>
+                </select>
+            </div>
+
+            <div id="productCount" class="mb-3"></div>
+
+            <div class="row g-4" id="productList">
+                <div class="col-lg-3 col-md-6 product cakes" data-price="10">
+                    <div class="card h-100">
+                        <img src="https://www.vkusnyblog.com/wp-content/uploads/2021/10/klukvennyi-tort-s-maskarpone.jpg" class="card-img-top" alt="Cakes">
+                        <div class="card-body">
+                            <h5 class="card-title">Cakes</h5>
+                            <p class="card-text">Delicious homemade cakes made with love.</p>
+                            <p class="card-price">$10</p> <!-- Цена добавлена здесь -->
+                            <a href="order.html" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product cupcakes" data-price="5">
+                    <div class="card h-100">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Yellow-Cupcakes_EXPS_BSFRTL23_41925_08_09_10b.jpg" class="card-img-top" alt="Cupcakes">
+                        <div class="card-body">
+                            <h5 class="card-title">Cupcakes</h5>
+                            <p class="card-text">Freshly baked cupcakes with various flavors.</p>
+                            <p class="card-price">$5</p> <!-- Цена добавлена здесь -->
+                            <a href="order.html" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product cookies" data-price="7">
+                    <div class="card h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2bplRLusR9j_dZdA1T8vo1WdKwDZToHnklQ&s" class="card-img-top" alt="Cookies">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookies</h5>
+                            <p class="card-text">Crunchy and soft cookies for every occasion.</p>
+                            <p class="card-price">$7</p> <!-- Цена добавлена здесь -->
+                            <a href="order.html" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product seasonal" data-price="8">
+                    <div class="card h-100">
+                        <img src="https://www.allrecipes.com/thmb/QYgcRLFqa5ntvlFYx6CD4ndPYCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-recipe-10110-soft-christmas-cookies-01-4x3-c75844ae9722478cb58056e30593dbbd.jpg" class="card-img-top" alt="Seasonal">
+                        <div class="card-body">
+                            <h5 class="card-title">Seasonal</h5>
+                            <p class="card-text">Special seasonal treats to celebrate the holidays.</p>
+                            <p class="card-price">$8</p> <!-- Цена добавлена здесь -->
+                            <a href="order.html" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="openPopup" class="btn btn-primary mt-4">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+
+    <!-- Popup Form -->
+    <div class="popup-form" id="popupForm">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <h3>Contact Us</h3>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</main>
+
+<footer class="bg-warning py-3" id="footer">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 mb-3">
+                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" class="logo" alt="AITU Logo">
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Have a problem?</h3>
+                <p>Contact us at 999999@astanait.edu.kz</p>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Links</h3>
+                <ul class="list-unstyled">
+                    <li><a class="text-dark" href="our_menu.html">Our Menu</a></li>
+                    <li><a class="text-dark" href="about_us.html">About Us</a></li>
+                    <li><a class="text-dark" href="celebration.html">Celebrations</a></li>
+                    <li><a class="text-dark" href="locations.html">Our Locations</a></li>
+                    <li><a class="text-dark" href="reserve.html">Reserve a Seat</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Authors:</h3>
+                <ul class="list-unstyled">
+                    <li>Dulat Ali</li>
+                    <li>Tugelbaev Galymzhan</li>
+                    <li>Nurlan Aidyn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/DarkMode.js"></script>
+<script src="js/Arrows.js"></script>
+<script src="js/main.js"></script>
+<script src="js/filter_storage_local.js"></script>
+</body>
+</html>

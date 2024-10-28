@@ -1,0 +1,126 @@
+
+:root {
+    --primary-color: #f4b083;
+    --background-color: #ffffff;
+    --reserve-button-color: #dc3343;
+    --footer-color: #ffc107;
+    --footer-text-color: #000000;
+    --footer-button-color: #60646c;
+    --faq-button-color: #24b4b0;
+    --text-color: #2a2a2a;
+    --carousel-text-color: #ffffff;
+    --navbar-hover-color: #e59a69;
+    --image-brightness: 100%;
+
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --primary-color: #0e4b61;
+    --background-color: #374045;
+    --reserve-button-color: #003343;
+    --footer-color: #b78114;
+    --footer-text-color: #374045;
+    --footer-button-color: #374045;
+    --faq-button-color: #8c2343;
+    --text-color: #c7cfde;
+    --carousel-text-color: #ffffff;
+    --navbar-hover-color: #136181;
+    --image-brightness: 70%;
+}
+
+
+body {
+    font-family: 'Kaushan Script', cursive;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--text-color);
+}
+button {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--navbar-hover-color);
+}
+        .carousel-item {
+            height: 88vh; 
+            background: no-repeat center center scroll;
+            background-size: cover;
+        }
+        .carousel-caption {
+            bottom: 20%; 
+            text-align: center;
+
+        }
+        .carousel-caption h2 {
+            color: var(--carousel-text-color);
+            font-size: 3rem; 
+        }
+        .carousel-caption a {
+            font-size: 1.5rem;
+        }
+        footer {
+            background-color: var(--footer-color);
+        }
+        .footer-logo {
+            width: 150px;
+        }
+        #faq {
+            background-color: var(--background-color);
+        }
+        .faq-item {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 0.5rem;
+            transition: max-height 0.5s ease-in-out;
+        }
+        #faqButton {
+            background-color: var(--faq-button-color);
+            border-color: var(--faq-button-color);
+            color: var(--text-color);
+        }
+        #faqSection {
+            color: var(--text-color);
+        }
+        #contactUsButton {
+            background-color: var(--footer-button-color);
+            color: var(--text-color);
+        }
+        #reserveButton  {
+            background-color: var(--reserve-button-color); ;
+            border-color: var(--reserve-button-color);
+        }
+        .carousel-inner{
+            filter: brightness(var(--image-brightness));
+        }
+.auth-button {
+            background-color: #28a745; /* Зеленый цвет для кнопок */
+            color: white; /* Цвет текста */
+            font-weight: bold; /* Жирный шрифт */
+            border-radius: 5px; /* Закругленные углы */
+            padding: 10px 15px; /* Отступы */
+        }
+
+        .auth-button:hover {
+            background-color: #218838; /* Более темный зеленый при наведении */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
