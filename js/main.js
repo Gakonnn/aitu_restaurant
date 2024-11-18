@@ -46,32 +46,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
-        const faqItems = document.querySelectorAll('.faq-question');
-        faqItems.forEach(item => {
-            item.addEventListener('click', function () {
-                const answer = this.nextElementSibling;
-                if (answer.style.display === "block") {
-                    answer.style.display = "none";
-                } else {
-                    answer.style.display = "block";
-                }
-            });
+    const faqItems = document.querySelectorAll('.faq-question');
+    faqItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const answer = this.nextElementSibling;
+            answer.style.display = (answer.style.display === "block") ? "none" : "block";
         });
-
-        const faqButton = document.getElementById('faqButton');
-        const faqSection = document.getElementById('faqSection');
-
-        faqButton.addEventListener('click', function () {
-            if (faqSection.style.display === "none") {
-                faqSection.style.display = "block";
-            } else {
-                faqSection.style.display = "none";
-            }
-        });
-
-        faqSection.style.display = 'none';
     });
+
+    const faqButton = document.getElementById('faqButton');
+    const faqSection = document.getElementById('faqSection');
+
+    faqButton.addEventListener('click', function () {
+        faqSection.style.display = (faqSection.style.display === "none" || faqSection.style.display === "") ? "block" : "none";
+    });
+
+    faqSection.style.display = 'none';
+});
 
 document.addEventListener("DOMContentLoaded", function() {
         const popupForm = document.getElementById("popupForm");

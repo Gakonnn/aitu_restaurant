@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="footer-logo">
+                <img id="logo-image" src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="footer-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,44 +36,65 @@
 
 <main>
     <div class="container">
-        <button class="time-button" id="showTimeBtn">Show Current Time</button>
-        </div>
-        <!-- Button for playing sound -->
-            <div class="text-center my-4">
-                <button id="play-sound-btn" class="btn btn-success">Play Sound</button>
-            </div>
+        <!-- О нас -->
+        <section id="about-us" class="content-section my-5">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-content">
+                AITU Restaurant is more than a dining experience – it's a journey into culinary excellence. 
+                Founded by visionaries from Astana IT University, we blend technology, tradition, and taste to 
+                bring you dishes that delight the senses. Come and experience the fusion of innovation and passion.
+            </p>
+        </section>
 
-            <!-- Date and Time Section -->
-            <div class="date-time bg-warning p-3 rounded mb-5" id="dateTimeDisplay">
-                Current date and time will be displayed here
-            </div>
-
-            <!-- Restaurant Details -->
-            <div id="restaurant-details" class="text-center my-4"></div>
-
-            <!-- Main Content Section -->
-            <div class="row content-section">
-                <div class="col-md-6 text-content" id="card">
-                    <h2>The Founding of AITU Restaurant</h2>
-                    <p>It all began in a bustling classroom at the Astana IT University...</p>
-                    <div id="list-container" class="my-5">
-                        <h2 class="text-center">Why choose us</h2>
-                        <ul id="list-items" class="list-group list-group-flush"></ul>
+        <!-- Отзывы -->
+        <section id="reviews" class="content-section my-5">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <p>"The ambiance is incredible, and the food is divine. AITU Restaurant is my go-to spot for celebrations!"</p>
+                        <p class="text-end"><strong>– Sarah K.</strong></p>
                     </div>
                 </div>
-                <div class="col-md-6" id="img">
-                    <img src="https://i.ibb.co/vBZbnxW/image-15.png" alt="Astana IT University Image" class="img-fluid rounded">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <p>"I love how they incorporate technology into the dining experience. It's unique and unforgettable!"</p>
+                        <p class="text-end"><strong>– Daniel M.</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <p>"Their dessert menu is out of this world! Highly recommend the chocolate lava cake."</p>
+                        <p class="text-end"><strong>– Lina S.</strong></p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- О поварах -->
+        <section id="our-chefs" class="content-section my-5">
+            <h2 class="text-center">Meet Our Chefs</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://images.satu.kz/83879044_w600_h600_83879044.jpg" alt="Chef 1" class="img-fluid rounded mb-3">
+                    <h4>Chef Alina Toren</h4>
+                    <p>Specialist in modern fusion cuisine, Alina combines her love for art and food to craft masterpieces.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://thumbs.dreamstime.com/z/парень-показывает-лайк-по-жест-отличное-качество-человек-уверенно-211559684.jpg" alt="Chef 2" class="img-fluid rounded mb-3">
+                    <h4>Chef Ivan Petrov</h4>
+                    <p>A veteran of classic French cooking, Ivan's expertise guarantees an unforgettable gastronomic journey.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
+
 
 <footer class="bg-warning py-3" id="footer">
         <div class="container">
             <div class="row text-center">
-                <div class="text-center">
-                    <img id="animate-image" src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="img-fluid" style="width: 150px;">
-                    <button id="animate-image-btn" class="btn btn-info mt-3">Animate Image</button>
-                </div>
+                
 
                 <div class="col-md-3 mb-3">
                     <h3>Have a problem?</h3>

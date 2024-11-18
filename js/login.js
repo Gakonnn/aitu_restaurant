@@ -1,9 +1,10 @@
-function loginUser() {
+function loginUser() { 
+    var username1 = document.getElementById("username").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     if (!username || !password) {
-        alert("Пожалуйста, заполните все поля.");
+        alert("Please fill in all fields.");
         return;
     }
 
@@ -15,12 +16,13 @@ function loginUser() {
             sessionStorage.setItem("username", username);
             sessionStorage.setItem("phoneNumber", userData.phoneNumber);
             localStorage.setItem("isLoggedIn", "true"); 
-            alert(`Добро пожаловать, ${username}!`);
-            window.location.href = "home.html"; 
+            alert(`Welcome, ${username}!`);
+            window.location.href = "user.html"; 
         } else {
-            alert("Неверное имя пользователя или пароль.");
+            alert("Incorrect username or password.");
         }
     } else {
-        alert("Пользователь не найден.");
+        alert("User not found.");
     }
 }
+

@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Регистрация</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/register.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/register.css" />
 </head>
 <body>
-<div class="container">
-    <h2>Register</h2>
-    <input type="text" id="username" placeholder="User name" required>
-    <input type="password" id="password" placeholder="password" required>
-    <input type="text" id="phoneNumber" placeholder="number phone" required>
-    <button onclick="registerUser()">Register</button>
-    <p><a href="login.html">Already have an account? Login</a></p>
-</div>
+  <div class="wrapper">
+    <div class="title"><span>Регистрация</span></div>
+    <form onsubmit="event.preventDefault(); registerUser();">
+      <div class="row">
+        <i class="fas fa-user"></i>
+        <input type="text" id="username" placeholder="User name" required />
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" required />
+      </div>
+      <div class="row">
+        <i class="fas fa-phone"></i>
+        <input type="text" id="phoneNumber" placeholder="Phone number" required />
+      </div>
+      <div class="row button">
+        <input type="submit" value="Register" />
+      </div>
+      <div class="signup-link">Already have an account? <a href="login.html">Login</a></div>
+    </form>
+  </div>
 
-<script src="js/register.js"></script>
+  <script src="js/register.js"></script>
 </body>
 </html>

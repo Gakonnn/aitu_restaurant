@@ -19,6 +19,7 @@
     --footer-color: #b78114;
     --footer-text-color: #374045;
     --footer-button-color: #374045;
+
     --text-color: #c7cfde;
     --navbar-hover-color: #136181;
     --image-brightness: 70%;
@@ -26,14 +27,11 @@
 }
 
 body {
-    font-family: 'Kaushan Script', cursive;
+    font-family: sans-serif; 
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-.navbar {
-    background-color: var(--primary-color);
-}
 
 .navbar-nav .nav-link {
     font-weight: bold;
@@ -107,6 +105,166 @@ button {
 #footer {
     background-color: var(--footer-color) !important;
 }
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--text-color);
+}
+
+.card-price {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+
+
+
+:root {
+    --primary-color: #f4b083;
+    --background-color: #FBF4DB;
+    --reserve-button-color: #dc3343;
+    --footer-color: #ffc107;
+    --footer-text-color: #000000;
+    --footer-button-color: #60646c;
+    --text-color: #2a2a2a;
+    --logo-brightness: 100%;
+    --image-brightness: 100%;
+
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --primary-color: #0e4b61;
+    --background-color: #374045;
+    --reserve-button-color: #003343;
+    --footer-color: #b78114;
+    --footer-text-color: #374045;
+    --footer-button-color: #374045;
+    --text-color: #c7cfde;
+    --navbar-hover-color: #136181;
+    --image-brightness: 70%;
+    --logo-brightness: 130%;
+}
+#theme-toggle {
+    background-color: #607d8b; /* Серо-голубой цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
+body {
+    font-family: 'sans-serif';
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--text-color)
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--navbar-hover-color);
+}
+
+
+
+.nav-item {
+    color: var(--text-color);
+}
+.logo {
+    width: 150px;
+}
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+.close-btn {
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    float: right;
+}
+.filtered {
+    display: none;
+}
+
+.form-control {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+}
+.form-select {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.form-select    ::placeholder { /* Edge 12 -18 */
+    color: var(--text-color);
+}
+
+.card  {
+    background-color: var(--primary-color);
+    color: var(--text-color)
+}
+button {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+.btn {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+#footer {
+    background-color: var(--footer-color) !important;
+}
+
+
+
 
 
 

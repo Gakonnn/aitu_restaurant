@@ -1,6 +1,6 @@
 :root {
     --primary-color: #f4b083;
-    --background-color: #ffffff;
+    --background-color: #FBF4DB;
     --reserve-button-color: #dc3343;
     --footer-color: #ffc107;
     --footer-text-color: #000000;
@@ -11,6 +11,16 @@
 
 }
 
+#theme-toggle {
+    background-color: #607d8b; /* Серо-голубой цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
 /* dark theme */
 [data-theme="dark"] {
     --primary-color: #0e4b61;
@@ -26,7 +36,7 @@
 }
 
 body {
-    font-family: 'Kaushan Script', cursive;
+    font-family: sans-serif; 
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -137,3 +147,10 @@ button {
         .change-color-btn:hover {
             background-color: #e59a69;
         }
+.lead {
+        margin-bottom: 100px;
+}
+
+.fs-5 {
+    margin-bottom: 50px;
+}

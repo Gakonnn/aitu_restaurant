@@ -1,5 +1,213 @@
 
 :root {
+    --primary-color: #F4B183; /* теплый абрикосовый */
+    --background-color: #FFFDF6; /* светло-кремовый */
+    --text-color: #4A4A4A; /* темно-серый */
+    --reserve-button-color: #D8435A; /* приглушенный красный */
+    --faq-button-color: #60A5A8; /* бирюзовый */
+}
+
+
+/* dark theme */
+[data-theme="dark"] {
+    --primary-color: #0e4b61;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    --background-color: #374045;
+    --reserve-button-color: #003343;
+    --footer-color: #b78114;
+    --footer-text-color: #374045;
+    --footer-button-color: #374045;
+    --faq-button-color: #8c2343;
+    --text-color: #c7cfde;
+    --carousel-text-color: #ffffff;
+    --navbar-hover-color: #136181;
+    --image-brightness: 70%;
+}
+
+
+body {
+    font-family: sans-serif; 
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+.navbar {
+    background-color: #dda15e; /* Прозрачный абрикосовый */
+    backdrop-filter: blur(10px); /* Размытие заднего фона */
+    border-bottom: 1px solid #e59a69;
+}
+
+.carousel-caption h2 {
+    font-size: 3.5rem; /* сделайте текст больше */
+    margin-bottom: 20px; /* добавьте пространство */
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--text-color);
+}
+button {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+button, .auth-button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, .auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--navbar-hover-color);
+}
+        .carousel-item {
+            height: 88vh; 
+            background: no-repeat center center scroll;
+            background-size: cover;
+        }
+        .carousel-caption {
+            bottom: 20%; 
+            text-align: center;
+
+        }
+        .carousel-caption h2 {
+            color: var(--carousel-text-color);
+            font-size: 3rem; 
+        }
+        .carousel-caption a {
+            font-size: 1.5rem;
+        }
+        footer {
+            background-color: #FFC618;
+            background: #FFC618;
+            color: var(--footer-text-color);
+        }
+        .footer-logo {
+            width: 150px;
+        }
+        #faq {
+            background-color: var(--background-color);
+        }
+        .faq-item {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 0.5rem;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        }
+
+        .faq-answer.show {
+            max-height: 200px;
+            transition: max-height 0.5s ease;
+        }
+
+        #faqButton {
+            background-color: var(--faq-button-color);
+            border-color: var(--faq-button-color);
+            color: var(--text-color);
+        }
+        #faqSection {
+            color: var(--text-color);
+        }
+        #contactUsButton {
+            background-color: var(--footer-button-color);
+            color: var(--text-color);
+        }
+        #reserveButton  {
+            background-color: var(--reserve-button-color); ;
+            border-color: var(--reserve-button-color);
+        }
+        .carousel-inner{
+            filter: brightness(var(--image-brightness));
+        }
+#faqSection {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+.faq-answer {
+    display: none; /* скрыто по умолчанию */
+}
+
+
+
+
+.auth-button {
+            background-color: #28a745; /* Зеленый цвет для кнопок */
+            color: white; /* Цвет текста */
+            font-weight: bold; /* Жирный шрифт */
+            border-radius: 5px; /* Закругленные углы */
+            padding: 10px 15px; /* Отступы */
+        }
+
+        .auth-button:hover {
+            background-color: #218838; /* Более темный зеленый при наведении */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+/* Кнопки "Войти" и "Регистрация" */
+.auth-button {
+    background-color: #ff5722; /* Оранжевый цвет */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
+
+.auth-button:hover {
+    background-color: #e64a19; /* Более темный оттенок оранжевого */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Усиление тени */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Кнопка "Ночной режим" */
+#theme-toggle {
+    background-color: #607d8b; /* Серо-голубой цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
+
+#theme-toggle:hover {
+    background-color: #455a64; /* Более темный оттенок */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+}
+
+
+
+
+:root {
     --primary-color: #f4b083;
     --background-color: #ffffff;
     --reserve-button-color: #dc3343;
@@ -31,96 +239,177 @@
 
 
 body {
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'sans-serif';
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
 .navbar {
     background-color: var(--primary-color);
+    color: var(--text-color)
 }
 
 .navbar-nav .nav-link {
     font-weight: bold;
     color: var(--text-color);
 }
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--navbar-hover-color);
+}
+#contactUsFloatingButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        border-radius: 50%;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+.nav-item {
+    color: var(--text-color);
+}
+
 button {
     background-color: var(--reserve-button-color);
     border-color: var(--reserve-button-color);
     color: var(--text-color);
 }
 
-.navbar-nav .nav-link:hover {
-    background-color: var(--navbar-hover-color);
+#navbarNav {
+    color: var(--text-color);
 }
-        .carousel-item {
-            height: 88vh; 
-            background: no-repeat center center scroll;
-            background-size: cover;
-        }
-        .carousel-caption {
-            bottom: 20%; 
-            text-align: center;
 
-        }
-        .carousel-caption h2 {
-            color: var(--carousel-text-color);
-            font-size: 3rem; 
-        }
-        .carousel-caption a {
-            font-size: 1.5rem;
-        }
-        footer {
-            background-color: var(--footer-color);
-        }
-        .footer-logo {
-            width: 150px;
-        }
-        #faq {
-            background-color: var(--background-color);
-        }
-        .faq-item {
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 1rem;
-        }
-        .faq-question {
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .faq-answer {
-            display: none;
-            padding-top: 0.5rem;
-            transition: max-height 0.5s ease-in-out;
-        }
-        #faqButton {
-            background-color: var(--faq-button-color);
-            border-color: var(--faq-button-color);
-            color: var(--text-color);
-        }
-        #faqSection {
-            color: var(--text-color);
-        }
-        #contactUsButton {
-            background-color: var(--footer-button-color);
-            color: var(--text-color);
-        }
-        #reserveButton  {
-            background-color: var(--reserve-button-color); ;
-            border-color: var(--reserve-button-color);
-        }
-        .carousel-inner{
-            filter: brightness(var(--image-brightness));
-        }
+.carousel-item {
+    height: 88vh;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+.carousel-caption {
+    bottom: 20%;
+    text-align: center;
+
+}
+.carousel-caption h2 {
+    color: var(--carousel-text-color);
+    font-size: 3rem;
+}
+.carousel-caption a {
+    font-size: 1.5rem;
+}
+footer {
+    background-color: var(--footer-color);
+}
+.footer-logo {
+    width: 150px;
+}
+#faq {
+    background-color: var(--background-color);
+}
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+}
+.faq-answer {
+    display: none;
+    padding-top: 0.5rem;
+    transition: max-height 0.5s ease-in-out;
+}
+#faqButton {
+    background-color: var(--faq-button-color);
+    border-color: var(--faq-button-color);
+    color: var(--text-color);
+}
+#faqSection {
+    color: var(--text-color);
+}
+#contactUsButton {
+    background-color: var(--footer-button-color);
+    color: var(--text-color);
+}
+#reserveButton  {
+    background-color: var(--reserve-button-color); ;
+    border-color: var(--reserve-button-color);
+}
+.carousel-inner{
+    filter: brightness(var(--image-brightness));
+}
 .auth-button {
-            background-color: #28a745; /* Зеленый цвет для кнопок */
-            color: white; /* Цвет текста */
-            font-weight: bold; /* Жирный шрифт */
-            border-radius: 5px; /* Закругленные углы */
-            padding: 10px 15px; /* Отступы */
-        }
+    background-color: #28a745; /* Зеленый цвет для кнопок */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px 15px; /* Отступы */
+}
 
-        .auth-button:hover {
-            background-color: #218838; /* Более темный зеленый при наведении */
-            text-decoration: none; /* Убираем подчеркивание */
-        }
+.auth-button:hover {
+    background-color: #218838; /* Более темный зеленый при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.auth-button {
+    background-color: #ff5722; /* Оранжевый цвет */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
+
+.auth-button:hover {
+    background-color: #e64a19; /* Более темный оттенок оранжевого */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Усиление тени */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+#faqSection {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+.faq-answer {
+    display: none; /* скрыто по умолчанию */
+}
+.faq-answer {
+    display: none; /* Изначально скрыто */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-danger {
+    transition: all 0.3s ease-in-out; /* Плавный переход для всех свойств */
+    transform: scale(1); /* Начальный размер */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+.btn-danger:hover {
+    background-color: #e3342f; /* Более насыщенный красный при наведении */
+    transform: scale(1.05); /* Увеличение кнопки */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Увеличение тени */
+    filter: brightness(110%); /* Лёгкое осветление кнопки */
+}
+
+.btn-danger:active {
+    transform: scale(0.98); /* Небольшое уменьшение при нажатии */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Уменьшение тени при нажатии */
+}
+
+.btn-primary{
+    background-color: #CC2B52;
+}
+
+#faqButton{
+    background-color: #CC2B52;
+}
+
+
+

@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="footer-logo">
+                <img id="logo-image" src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="footer-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,7 +71,7 @@
 <main class="container-fluid p-0">
     <!-- Add a button -->
     <div class="text-center my-4" id="faq">
-        <button id="faqButton" class="btn btn-primary btn-lg">Show/Hide FAQs</button>
+        <button id="faqButton" class="btn btn-lg btn-lg ">Show/Hide FAQs</button>
     </div>
 
     <!-- FAQ Section -->
@@ -96,6 +96,40 @@
             </div>
         </div>
     </div>
+
+    <button id="contactUsFloatingButton" class="btn btn-primary" data-toggle="modal" data-target="#contactUsModal">
+        Contact Us
+    </button>
+
+    <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nameInput">Name</label>
+                            <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailInput">Email</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="messageTextarea">Message</label>
+                            <textarea class="form-control" id="messageTextarea" rows="4" placeholder="Write your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 
@@ -108,7 +142,7 @@
             <div class="col-md-3 mb-3">
                 <h3>Have a problem?</h3>
                 <p>Contact us at 999999@astanait.edu.kz</p>
-                <a href="contact.html" class="btn btn-secondary" id="contactUsButton">Contact Us</a>
+                
             </div>
             <div class="col-md-3 mb-3">
                 <h3>Links</h3>

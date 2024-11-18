@@ -1,32 +1,13 @@
 :root {
-    --primary-color: #f4b083;
-    --background-color: #ffffff;
-    --reserve-button-color: #dc3343;
-    --footer-color: #ffc107;
-    --footer-text-color: #000000;
-    --footer-button-color: #60646c;
-    --text-color: #2a2a2a;
-    --navbar-hover-color: #e59a69;
-    --logo-brightness: 100%;
-    --image-brightness: 100%;
-
-}
-
-/* dark theme */
-[data-theme="dark"] {
-    --primary-color: #0e4b61;
-    --background-color: #374045;
-    --reserve-button-color: #003343;
-    --footer-color: #b78114;
-    --footer-text-color: #374045;
-    --footer-button-color: #374045;
-    --text-color: #c7cfde;
-    --navbar-hover-color: #136181;
-    --image-brightness: 70%;
-    --logo-brightness: 130%;
+    --primary-color: #F4B183; /* теплый абрикосовый */
+    --background-color: #FFFDF6; /* светло-кремовый */
+    --text-color: #4A4A4A; /* темно-серый */
+    --reserve-button-color: #D8435A; /* приглушенный красный */
+    --faq-button-color: #60A5A8; /* бирюзовый */
+    --footer-color: #F4D03F; /* золотисто-желтый */
 }
         body {
-            font-family: 'Kaushan Script', cursive;
+            font-family: sans-serif; 
             background-color: var(--background-color);
             color: var(--text-color);
         }
@@ -82,29 +63,12 @@ button {
         }
 
         .text-content {
-            background-color: #f4b083;
             padding: 20px;
             border-radius: 10px;
         }
 
-        .date-time {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 20px 0;
-            text-align: center;
-            opacity: 1;
-            transition: opacity 0.5s ease;
-            color: #d3845b;
-        }
-        #dateTimeDisplay {
-            background-color: var(--footer-color) !important;
-            color: var(--text-color);
-        }
 
-        #showTimeBtn {
-            background-color: var(--footer-color);
-            color: var(--footer-text-color);
-        }
+
 
         .fade-out {
             opacity: 0;
@@ -116,20 +80,9 @@ button {
             transition: opacity 1s ease-in-out;
         }
 
-        .time-button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #ffc107;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 5px;
-        }
 
-        .time-button:hover {
-            background-color: #e59a69;
-        }
+
+
         .selected {
             color: gold;
         }
@@ -162,5 +115,394 @@ button {
         }
 
 
+
+.navbar {
+    background-color: var(--primary-color); /* Основной цвет для navbar */
+    backdrop-filter: blur(10px); /* Размытие фона */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Небольшая рамка снизу */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--text-color); /* Цвет ссылок */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкая подсветка при наведении */
+    color: var(--background-color); /* Контрастный текст */
+}
+
+/* Кнопка переключения темы */
+#theme-toggle {
+    background-color: var(--primary-color); /* Основной цвет кнопки */
+    color: white; /* Текст белого цвета */
+    border: none; /* Без границы */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Закругленные углы */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Темный оттенок */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Футер */
+footer {
+    background: linear-gradient(45deg, var(--footer-color), var(--primary-color));
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-logo {
+    width: 150px; /* Размер логотипа в футере */
+    margin-bottom: 15px;
+}
+
+
+
+
+/* dark theme */
+[data-theme="dark"] {
+    --primary-color: #0e4b61;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    --background-color: #374045;
+    --reserve-button-color: #003343;
+    --footer-color: #b78114;
+    --footer-text-color: #374045;
+    --footer-button-color: #374045;
+    --faq-button-color: #8c2343;
+    --text-color: #c7cfde;
+    --carousel-text-color: #ffffff;
+    --navbar-hover-color: #136181;
+    --image-brightness: 70%;
+}
+
+
+body {
+    font-family: sans-serif; 
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+.navbar {
+    background-color: rgba(244, 176, 131, 0.8); /* Прозрачный абрикосовый */
+    backdrop-filter: blur(10px); /* Размытие заднего фона */
+    border-bottom: 1px solid #e59a69;
+}
+
+.carousel-caption h2 {
+    font-size: 3.5rem; /* сделайте текст больше */
+    margin-bottom: 20px; /* добавьте пространство */
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--text-color);
+}
+button {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+button, .auth-button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, .auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--navbar-hover-color);
+}
+        .carousel-item {
+            height: 88vh; 
+            background: no-repeat center center scroll;
+            background-size: cover;
+        }
+        .carousel-caption {
+            bottom: 20%; 
+            text-align: center;
+
+        }
+        .carousel-caption h2 {
+            color: var(--carousel-text-color);
+            font-size: 3rem; 
+        }
+        .carousel-caption a {
+            font-size: 1.5rem;
+        }
+        footer {
+            background-color: var(--footer-color);
+            background: linear-gradient(45deg, #ffc107, #e59a69);
+            color: var(--footer-text-color);
+        }
+        .footer-logo {
+            width: 150px;
+        }
+        #faq {
+            background-color: var(--background-color);
+        }
+        .faq-item {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 0.5rem;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        }
+
+        .faq-answer.show {
+            max-height: 200px;
+            transition: max-height 0.5s ease;
+        }
+
+        #faqButton {
+            background-color: var(--faq-button-color);
+            border-color: var(--faq-button-color);
+            color: var(--text-color);
+        }
+        #faqSection {
+            color: var(--text-color);
+        }
+        #contactUsButton {
+            background-color: var(--footer-button-color);
+            color: var(--text-color);
+        }
+        #reserveButton  {
+            background-color: var(--reserve-button-color); ;
+            border-color: var(--reserve-button-color);
+        }
+        .carousel-inner{
+            filter: brightness(var(--image-brightness));
+        }
+#faqSection {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+.auth-button {
+            background-color: #28a745; /* Зеленый цвет для кнопок */
+            color: white; /* Цвет текста */
+            font-weight: bold; /* Жирный шрифт */
+            border-radius: 5px; /* Закругленные углы */
+            padding: 10px 15px; /* Отступы */
+        }
+
+        .auth-button:hover {
+            background-color: #218838; /* Более темный зеленый при наведении */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+/* Кнопки "Войти" и "Регистрация" */
+.auth-button {
+    background-color: #ff5722; /* Оранжевый цвет */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
+
+.auth-button:hover {
+    background-color: #e64a19; /* Более темный оттенок оранжевого */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Усиление тени */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+img{
+    width: 200px;
+    height: 100%;
+}
+
+
+
+:root {
+    --primary-color: #f4b083;
+    --background-color: #FBF4DB;
+    --reserve-button-color: #dc3343;
+    --footer-color: #ffc107;
+    --footer-text-color: #000000;
+    --footer-button-color: #60646c;
+    --text-color: #2a2a2a;
+    --navbar-hover-color: #e59a69;
+    --logo-brightness: 100%;
+    --image-brightness: 100%;
+    --card-color: white;
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --primary-color: #0e4b61;
+    --background-color: #374045;
+    --reserve-button-color: #003343;
+    --footer-color: #b78114;
+    --footer-text-color: #374045;
+    --footer-button-color: #374045;
+    --text-color: #c7cfde;
+    --navbar-hover-color: #136181;
+    --image-brightness: 70%;
+    --logo-brightness: 130%;
+    --card-color: #227367;
+}
+body {
+    font-family: sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--text-color)
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--navbar-hover-color);
+}
+
+.nav-item {
+    color: var(--text-color);
+}
+
+ .logo {
+     width: 150px;
+ }
+
+#footer {
+    background-color: var(--footer-color) !important;
+}
+
+button {
+    background-color: var(--reserve-button-color);
+    border-color: var(--reserve-button-color);
+    color: var(--text-color);
+}
+
+
+.footer-logo {
+    width: 150px;
+    filter: brightness(var(--logo-brightness));
+}
+
+.content-section {
+    margin-bottom: 40px;
+
+}
+
+#img {
+    filter: brightness(var(--image-brightness));
+}
+
+.content-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.text-content {
+
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.selected {
+    color: gold;
+}
+
+.animate {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+#list-items {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+}
+#list-container {
+    background-color: var(--primary-color);
+}
+.list-group-item {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+#animate-image {
+    filter: brightness(var(--logo-brightness));
+}
+#animate-image-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+image {
+    filter: brightness(var(--logo-brightness));
+}
+
+#about-us {
+    background-color: var(--footer-color);
+}
+
+.card {
+    background-color: var(--card-color);
+}
+#theme-toggle {
+    background-color: #607d8b; /* Серо-голубой цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 30px; /* Сильное закругление углов */
+    padding: 10px 20px; /* Отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавный переход */
+}
 
 
