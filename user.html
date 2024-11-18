@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITU Restaurant</title>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan%20Script" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <script src="js/login.js"></script>
+    <script src="js/user.js"></script>
+    
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" alt="AITU Logo" class="footer-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="our_menu.html">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="celebration.html">Celebrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Our Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve a Seat</a></li>
+                    <li class="nav-item" id="registerButton"><a class="nav-link auth-button" href="register.html">Register</a></li>
+                    <li class="nav-item" id="loginButton"><a class="nav-link auth-button" href="login.html">Login</a></li>
+                    <li class="nav-item d-none" id="logoutButton"><a class="nav-link auth-button" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle">NightMode</button>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container-fluid p-4">
+    <div class="container">
+        <h1 class="mb-4">Welcome, <span id="userName"></span>!</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Your Profile Information</h5>
+                <p class="card-text"><strong>Username:</strong> <span id="profileUsername"></span></p>
+                <p class="card-text"><strong>Phone Number:</strong> <span id="profilePhone"></span></p>
+                <a href="#" id="logout" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+</main>
+
+
+<footer class="py-3">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 mb-3">
+                <img src="https://i.ibb.co/Xxv4w6d/Group-2.png" class="footer-logo" alt="AITU Logo">
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Have a problem?</h3>
+                <p>Contact us at 999999@astanait.edu.kz</p>
+                <a href="contact.html" class="btn btn-secondary" id="contactUsButton">Contact Us</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Links</h3>
+                <ul class="list-unstyled">
+                    <li><a class="text-dark" href="our_menu.html">Our Menu</a></li>
+                    <li><a class="text-dark" href="about_us.html">About Us</a></li>
+                    <li><a class="text-dark" href="celebration.html">Celebrations</a></li>
+                    <li><a class="text-dark" href="locations.html">Our Locations</a></li>
+                    <li><a class="text-dark" href="reserve.html">Reserve a Seat</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h3>Authors:</h3>
+                <ul class="list-unstyled">
+                    <li>Dulat Ali</li>
+                    <li>Tugelbaev Galymzhan</li>
+                    <li>Nurlan Aidyn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/DarkMode.js"></script>
+<script src="js/Home.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
